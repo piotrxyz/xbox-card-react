@@ -56,8 +56,6 @@ class Card extends Component {
       })
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
-
         const {
           product,
           sizes: { items },
@@ -178,6 +176,7 @@ class Card extends Component {
                           quantity: 1
                         })
                       }
+                      defaultChecked={item.name === 'Ram 32 GB'}
                       name="size"
                       type="radio"
                       key={item.type}
@@ -192,7 +191,6 @@ class Card extends Component {
                     const [id, values] = item;
                     return Object.values(values.values).map((value) => {
                       const { name: color } = value;
-                      // console.log(name);
                       return (
                         <option key={id} value={color}>
                           {color}
