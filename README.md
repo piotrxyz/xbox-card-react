@@ -35,6 +35,6 @@ This is a simple xbox shopping card.
 Project uses:
 
 - React (class components)
-- Styled Components
+- Styled-components
 - JSON
 - Tools: ESlint, Priettier
