@@ -9,7 +9,6 @@ import Icons from '../../assets/Icons';
 const StyledPopup = styled(Popup)`
   &-overlay {
     position: absolute !important;
-    background: #cccccc;
   }
 `;
 
@@ -33,7 +32,7 @@ const OpenModalBtn = styled.button`
 const CloseButton = styled.button`
   z-index: 100;
   position: absolute;
-  top: 23.9px;
+  top: 37.9px;
   right: 19px;
   display: flex;
   align-items: center;
@@ -41,6 +40,10 @@ const CloseButton = styled.button`
 
   &:hover {
     transform: scale(1.2);
+  }
+
+  @media (min-width: ${({ theme }) => theme.tablet}) {
+    top: 23.9px;
   }
 `;
 

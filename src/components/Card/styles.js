@@ -3,6 +3,7 @@ import styled, { css } from 'styled-components';
 const bounce = `cubic-bezier(0.68, -0.55, 0.27, 1.55);`;
 
 export const FormContainer = styled.form`
+  margin: 20px 0 20px 0;
   background: white;
   position: relative;
   display: flex;
@@ -13,6 +14,7 @@ export const FormContainer = styled.form`
 
   @media (min-width: ${({ theme }) => theme.tablet}) {
     flex-direction: row;
+    margin: 0;
   }
 `;
 
