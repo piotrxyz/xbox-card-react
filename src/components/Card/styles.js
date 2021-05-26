@@ -115,6 +115,7 @@ export const OrderInformationContainer = styled.div`
 export const DeliveryInformation = styled.div`
   display: flex;
   align-items: center;
+  margin: 5px 0 5px 0;
 
   img {
     width: 15px;
@@ -142,7 +143,14 @@ export const Availability = styled.div`
 `;
 
 export const StatusContainer = styled.div`
+  display: flex;
+  flex-direction: column;
   min-width: 165px;
+
+  @media (min-width: ${({ theme }) => theme.tablet}) {
+    flex-direction: row;
+    align-items: center;
+  }
 `;
 
 export const Status = styled.span`
@@ -241,8 +249,10 @@ export const PlusButton = styled.button`
 export const FormFooter = styled.div`
   display: flex;
   flex-direction: column;
+  margin-top: 10px;
 
   @media (min-width: ${({ theme }) => theme.tablet}) {
     flex-direction: row;
+    margin-top: 0;
   }
 `;

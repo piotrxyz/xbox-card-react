@@ -185,7 +185,7 @@ class Card extends Component {
                     />
                   ))}
                 </RadioGroupContainer>
-                <Label>Wariant:</Label>
+                <Label htmlFor="color">Wariant:</Label>
                 <Select onChange={this.handleColorChange}>
                   {Object.entries(data.multiversions[0].items).map((item) => {
                     const [id, values] = item;
@@ -203,26 +203,35 @@ class Card extends Component {
                   <Availability>
                     <StatusContainer>
                       {amount !== 0 ? (
-                        <img src={Icons.CheckIcon} alt="checkmark" />
+                        <>
+                          <Status>
+                            <img src={Icons.CheckIcon} alt="checkmark" />
+                            {status}
+                          </Status>
+                          <DeliveryInformation>
+                            <img src={Icons.ClockIcon} alt="clock icon" />
+                            <DetailedInformation>
+                              <span>Możemy wysłać już dzisiaj!</span>
+                              <a
+                                aria-label="delivery information link"
+                                href="https://www.google.com/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                              >
+                                Sprawdź czasy i koszty wysyłki
+                              </a>
+                            </DetailedInformation>
+                          </DeliveryInformation>
+                        </>
                       ) : (
-                        <img src={Icons.CrossIcon} alt="cross" />
+                        <>
+                          <Status>
+                            <img src={Icons.CrossIcon} alt="cross" />
+                            {status}
+                          </Status>
+                        </>
                       )}
-                      <Status>{status}</Status>
                     </StatusContainer>
-                    <DeliveryInformation>
-                      <img src={Icons.ClockIcon} alt="clock icon" />
-                      <DetailedInformation>
-                        <span>Możemy wysłać już dzisiaj!</span>
-                        <a
-                          aria-label="delivery information link"
-                          href="https://www.google.com/"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          Sprawdź czasy i koszty wysyłki
-                        </a>
-                      </DetailedInformation>
-                    </DeliveryInformation>
                   </Availability>
                 </OrderInformationContainer>
               </FormFields>
@@ -238,7 +247,7 @@ class Card extends Component {
                   <PlusButton
                     type="button"
                     onClick={this.increment}
-                    disabled={amount === 1}
+                    disabled={amount === 1 || quantity === amount}
                   >
                     <img src={Icons.PlusIcon} alt="plus" />
                   </PlusButton>
