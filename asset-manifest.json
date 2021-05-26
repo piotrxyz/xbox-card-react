@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/xbox-card-react/static/js/main.87e1e22e.chunk.js",
-    "main.js.map": "/xbox-card-react/static/js/main.87e1e22e.chunk.js.map",
-    "runtime-main.js": "/xbox-card-react/static/js/runtime-main.6a8c3f06.js",
-    "runtime-main.js.map": "/xbox-card-react/static/js/runtime-main.6a8c3f06.js.map",
-    "static/js/2.63b33a79.chunk.js": "/xbox-card-react/static/js/2.63b33a79.chunk.js",
-    "static/js/2.63b33a79.chunk.js.map": "/xbox-card-react/static/js/2.63b33a79.chunk.js.map",
+    "main.js": "/xbox-card-react/static/js/main.17cddce8.chunk.js",
+    "main.js.map": "/xbox-card-react/static/js/main.17cddce8.chunk.js.map",
+    "runtime-main.js": "/xbox-card-react/static/js/runtime-main.793ebc28.js",
+    "runtime-main.js.map": "/xbox-card-react/static/js/runtime-main.793ebc28.js.map",
+    "static/js/2.01ed2869.chunk.js": "/xbox-card-react/static/js/2.01ed2869.chunk.js",
+    "static/js/2.01ed2869.chunk.js.map": "/xbox-card-react/static/js/2.01ed2869.chunk.js.map",
     "index.html": "/xbox-card-react/index.html",
-    "static/js/2.63b33a79.chunk.js.LICENSE.txt": "/xbox-card-react/static/js/2.63b33a79.chunk.js.LICENSE.txt",
+    "static/js/2.01ed2869.chunk.js.LICENSE.txt": "/xbox-card-react/static/js/2.01ed2869.chunk.js.LICENSE.txt",
     "static/media/arrow.8c2f2794.svg": "/xbox-card-react/static/media/arrow.8c2f2794.svg",
     "static/media/check.12c6a570.svg": "/xbox-card-react/static/media/check.12c6a570.svg",
     "static/media/clock.c6f3f6be.svg": "/xbox-card-react/static/media/clock.c6f3f6be.svg",
@@ -18,8 +18,8 @@
     "static/media/xwhiteS.89bfd587.png": "/xbox-card-react/static/media/xwhiteS.89bfd587.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.6a8c3f06.js",
-    "static/js/2.63b33a79.chunk.js",
-    "static/js/main.87e1e22e.chunk.js"
+    "static/js/runtime-main.793ebc28.js",
+    "static/js/2.01ed2869.chunk.js",
+    "static/js/main.17cddce8.chunk.js"
   ]
 }
