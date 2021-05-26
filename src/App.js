@@ -1,10 +1,8 @@
-/* eslint-disable no-console */
 import React, { Component } from 'react';
 import styledNormalize from 'styled-normalize';
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
 import { standardTheme } from './constants/styles';
-import Button from './components/Button';
-import Card from './components/Card';
+import Modal from './components/Modal';
 
 const GlobalStyle = createGlobalStyle`
   ${styledNormalize}
@@ -24,7 +22,6 @@ const GlobalStyle = createGlobalStyle`
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #E0E0E1;
     min-height: 100%;
     width: 100%;
   }
@@ -50,36 +47,14 @@ const GlobalStyle = createGlobalStyle`
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      orders: [],
-      showModal: false
-    };
+    this.state = {};
   }
 
-  toggleModal = () => {
-    this.setState({
-      showModal: true
-    });
-  };
-
-  addOrder = (newOrder) => {
-    this.setState((prevState) => ({
-      ...prevState,
-      orders: [newOrder, ...prevState.orders]
-    }));
-    console.log(newOrder);
-  };
-
   render() {
-    const { showModal } = this.state;
     return (
       <ThemeProvider theme={standardTheme}>
         <GlobalStyle />
-        {showModal ? (
-          <Card onSubmit={this.addOrder} />
-        ) : (
-          <Button title="Click" type="button" onClick={this.toggleModal} />
-        )}
+        <Modal />
       </ThemeProvider>
     );
   }

@@ -16,20 +16,6 @@ export const FormContainer = styled.form`
   }
 `;
 
-export const CloseButton = styled.button`
-  z-index: 100;
-  position: absolute;
-  top: 23.9px;
-  right: 19px;
-  display: flex;
-  align-items: center;
-  transition: transform 0.3s ease;
-
-  &:hover {
-    transform: scale(1.2);
-  }
-`;
-
 export const Carousel = styled.div`
   display: flex;
   align-items: center;
@@ -218,6 +204,13 @@ export const QuantityCounter = styled.div`
     min-width: 150px;
     max-width: 150px;
   }
+
+  ${(props) =>
+    props.disabled &&
+    css`
+      opacity: 0.3;
+      pointer-events: none;
+    `}
 `;
 
 export const MinusButton = styled.button`

@@ -8,7 +8,6 @@ import Radio from '../Radio';
 import Select from '../Select';
 import {
   FormContainer,
-  CloseButton,
   Carousel,
   ImageContainer,
   RightArrow,
@@ -144,9 +143,6 @@ class Card extends Component {
           <Loader />
         ) : (
           <FormContainer onSubmit={this.handleSubmit}>
-            <CloseButton type="button">
-              <img src={Icons.CloseIcon} alt="close" />
-            </CloseButton>
             <Carousel>
               <LeftArrow type="button">
                 <img src={Icons.ArrowIcon} alt="left arrow" />
@@ -236,22 +232,26 @@ class Card extends Component {
                 </OrderInformationContainer>
               </FormFields>
               <FormFooter>
-                <QuantityContainer disabled={amount === 0}>
+                <QuantityContainer>
                   <MinusButton
                     type="button"
                     onClick={this.decrement}
-                    disabled={amount === 1}
+                    disabled={quantity === 1}
                   >
                     <img src={Icons.MinusIcon} alt="minus" />
                   </MinusButton>
                   <PlusButton
                     type="button"
                     onClick={this.increment}
-                    disabled={amount === 1 || quantity === amount}
+                    disabled={
+                      amount === 1 || quantity === amount || amount === 0
+                    }
                   >
                     <img src={Icons.PlusIcon} alt="plus" />
                   </PlusButton>
-                  <QuantityCounter>{quantity}</QuantityCounter>
+                  <QuantityCounter disabled={amount === 0}>
+                    {quantity}
+                  </QuantityCounter>
                 </QuantityContainer>
                 <Button
                   type="submit"
