@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import styledNormalize from 'styled-normalize';
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
 import { standardTheme } from './constants/styles';
@@ -44,12 +44,7 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
-class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
-
+class App extends PureComponent {
   render() {
     return (
       <ThemeProvider theme={standardTheme}>
